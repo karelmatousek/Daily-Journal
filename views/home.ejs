@@ -1,0 +1,9 @@
+
+<%- include('partials/header') %>
+<h1>Hello</h1>
+<p><%= homeStartingContent %></p>
+<% posts.forEach(post => {%>   <!--místo fce FOR-->
+    <h2> <%= post.title.substring(0, 100) %></h2> <!--substring zkrátí text na 100 charakterů-->
+    <p> <%= post.post.substring(0, 100) + " ... "%><a href="/posts/<%= post.title %>">Read more</a></p>
+<% }); %>
+<%- include('partials/footer') %>
